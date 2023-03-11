@@ -14,7 +14,7 @@ class AnimalListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Animal list"
-        tableView.rowHeight = 160
+        tableView.rowHeight = 145
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

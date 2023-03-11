@@ -37,7 +37,6 @@ class CityListViewController: UITableViewController {
         
         return cell
     }
-
 }
 
 private extension CityListViewController {
@@ -51,4 +50,3 @@ private extension CityListViewController {
         return sheltersFromCity
     }
 }
-// укмукмукму

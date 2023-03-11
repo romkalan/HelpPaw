@@ -13,7 +13,7 @@ class InfoShelterViewController: UIViewController {
 
     @IBOutlet var logoShelterImage: UIImageView! {
         didSet {
-//            logoShelterImage.layer.cornerRadius  = logoShelterImage.frame.height / 2
+            logoShelterImage.layer.cornerRadius  = logoShelterImage.frame.height / 2
         }
     }
     
