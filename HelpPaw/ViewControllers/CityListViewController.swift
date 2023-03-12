@@ -14,7 +14,7 @@ class CityListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Choose city"
+        navigationItem.title = "Выберите город"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
