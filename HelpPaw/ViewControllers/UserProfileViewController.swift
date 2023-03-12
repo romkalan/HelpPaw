@@ -21,7 +21,7 @@ class UserProfileViewController: UIViewController {
     }
     
     @IBAction func sendQuestionnaire() {
-        let questionnaireTextFields = [userNameTextField, ageTextField, addressOfResidenceTextField, contactNumberTextField, childrenTextField]
+        let questionnaireTextFields = [userNameTextField, addressOfResidenceTextField, contactNumberTextField, childrenTextField]
         
         var allFieldsFilled = true
         for questionnaireTextField in questionnaireTextFields {
