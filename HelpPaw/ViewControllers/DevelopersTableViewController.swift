@@ -8,7 +8,6 @@
 import UIKit
 
 final class DevelopersTableViewController: UITableViewController {
-    
 
     private let developers = Developers.getDevelopersInfo()
     
@@ -31,7 +30,7 @@ final class DevelopersTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       5
+        developers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,19 +43,16 @@ final class DevelopersTableViewController: UITableViewController {
         content.image = UIImage(named: developer.name)
         cell.contentConfiguration = content
         
-        
         return cell
     }
     
     
-    
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 100
+        100
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return footerView()
+        footerView()
     }
-
-
+    
 }

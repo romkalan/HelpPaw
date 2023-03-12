@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoShelterViewController: UIViewController {
+final class InfoShelterViewController: UIViewController {
     
     var shelter: Shelter!
 
@@ -27,7 +27,5 @@ class InfoShelterViewController: UIViewController {
         addressShelterLabel.text = shelter.address
         logoShelterImage.image = UIImage(named: shelter.name)
     }
-    
-
 
 }

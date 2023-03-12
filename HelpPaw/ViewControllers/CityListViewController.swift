@@ -7,9 +7,8 @@
 
 import UIKit
 
-class CityListViewController: UITableViewController {
+final class CityListViewController: UITableViewController {
     
-    //var shelters: [Shelter]!
     let shelters = Shelter.getShelters()
 
     override func viewDidLoad() {
@@ -18,10 +17,10 @@ class CityListViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let cellVC = segue.destination as? ShelterListViewController else { return }
+        guard let sheltersVC = segue.destination as? ShelterListViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
-        cellVC.sheltersOfCity = chooseSheltersFrom(City: City.allCases[indexPath.row])
+        sheltersVC.sheltersOfCity = chooseSheltersFrom(City: City.allCases[indexPath.row])
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -21,11 +21,12 @@ class UserProfileViewController: UIViewController {
     }
     
     @IBAction func sendQuestionnaire() {
-        let  questionnaireTextFields = [userNameTextField, ageTextField, addressOfResidenceTextField, contactNumberTextField, childrenTextField]
+        let questionnaireTextFields = [userNameTextField, ageTextField, addressOfResidenceTextField, contactNumberTextField, childrenTextField]
         
         var allFieldsFilled = true
         for questionnaireTextField in questionnaireTextFields {
-            if questionnaireTextField?.text?.isEmpty ?? true {
+            guard let questionTF = questionnaireTextField?.text else { return }
+            if questionTF.isEmpty {
                 allFieldsFilled = false
                 break
             }
@@ -33,7 +34,7 @@ class UserProfileViewController: UIViewController {
         
         if allFieldsFilled {
             let alertController = UIAlertController(title: "Анкета отправлена", message: "Спасибо, что помогли обрести дом еще одному пушистику!🐶🐱", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Готово", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "Готово", style: .default)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
             
@@ -44,7 +45,7 @@ class UserProfileViewController: UIViewController {
         } else {
             
             let alertController = UIAlertController(title: "Ой!", message: "Пожалуйста, заполните все поля в анкете.😿", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: .default)
             alertController.addAction(okAction)
             present(alertController, animated: true, completion: nil)
         }

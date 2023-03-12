@@ -7,13 +7,13 @@
 
 import UIKit
 
-class AnimalInfoViewController: UIViewController {
+final class AnimalInfoViewController: UIViewController {
     
     var animal: Animal!
     
     @IBOutlet var customView: UIView!
     
-    @IBOutlet var nameAnimalLAbel: UILabel!
+    @IBOutlet var nameAnimalLabel: UILabel!
     @IBOutlet var yearsOldLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -22,7 +22,7 @@ class AnimalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "О животном"
-        nameAnimalLAbel.text = animal.name
+        nameAnimalLabel.text = animal.name
         yearsOldLabel.text = String(animal.age)
         descriptionLabel.text = animal.description
         animalImage.image = UIImage(named: "\(animal.name)")
